@@ -1,0 +1,10 @@
+<h1>List of all the clients</h1>
+<% if @client.empty?%>
+	<p>Nothing in the clients db</p>
+<% else %>
+	<table>
+	<% @client.each do |c| %>
+	<tr><td><%= link_to "#{c.companyorindividual} #{c.mobilenumber}", "/clients/#{c.id}/"  %> - <%= link_to "Edit","/clients/#{c.id}/edit"   %></td></tr>
+	<% end %>
+	</table>
+<% end %>

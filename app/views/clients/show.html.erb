@@ -1,0 +1,23 @@
+<h1><%= "#{@client.companyorindividual} - (#{@client.city}/#{@client.state})" %></h1>
+<p class="sub"><%= @client.address %></p>
+
+<br/><br/>
+<table class ="table table-striped table-bordered">
+	<thead>
+		<tr>
+		<th>Email</th>
+		<th>Landline Number</th>
+		<th>Mobile Number</th>
+		</tr>
+	</thead>
+	<tr>
+		<td><%= @client.email %></td>
+		<td><%= @client.landlinephone %></td>
+		<td><%= @client.mobilenumber %></td>
+</tr>
+</table>
+<%=link_to "Create a new policy", "/policies/new?id=#{@client.id}"%>	
+
+<% @client.policies.each do |p| %>
+<%= p.pnum %>
+<%end%>

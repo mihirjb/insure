@@ -1,0 +1,50 @@
+<%= form_for @policy, :html => { :multipart => true } do |f| -%>
+<div class="field">
+	<%= f.label :pnum, "Policy number" %>
+	<%= f.text_field :pnum %>
+</div>  
+
+<div class="field">
+	<%= f.label :ptype, "Policy Type" %>
+	<%= f.text_field :ptype %>
+</div>  
+
+<div class="field">
+	<%= f.label :personinsured, "Person Insured" %>
+	<%= f.text_field :personinsured %>
+</div>
+
+
+<div class="field">
+	<%= f.label :depositedate, "Deposit Date" %>
+	<%= f.text_field :depositedate %>
+</div>
+
+<div class="field">
+	<%= f.label :duedate, "Due Date" %>
+	<%= f.text_field :duedate %>
+</div>
+
+<div class="field">
+	<%= f.label :insurancecompany , "Insurance Company" %>
+	<%= f.text_field :insurancecompany %> 
+</div>
+
+<div class="field">
+	<%= f.label :premium, "Premium" %>
+	<%= f.text_field :premium %>
+</div>
+
+<div class="field">
+	<%= f.label :sumassured, "Total sum" %>
+	<%= f.text_field :sumassured %>
+</div>
+
+<div class="field">
+	<%= f.hidden_field :client_id %>
+</div>  
+
+<div class="field">
+<%= f.submit "Add", :disable_with => 'Adding...' %>
+</div>
+<% end -%>
